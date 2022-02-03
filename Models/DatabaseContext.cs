@@ -7,7 +7,6 @@ namespace GameNightWithFriends.Models
 {
     public partial class DatabaseContext : DbContext
     {
-        public DbSet<GameNight> GameNights { get; set; }
 
         // Change this if you want to have a different database name in development
         private static string DEVELOPMENT_DATABASE_NAME = "GameNightWithFriendsDatabase";
@@ -16,6 +15,7 @@ namespace GameNightWithFriends.Models
         private static bool LOG_SQL_STATEMENTS_IN_DEVELOPMENT = false;
 
         // Add database tables here
+        public DbSet<GameNight> GameNights { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
